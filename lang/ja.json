@@ -1,0 +1,40 @@
+{
+  "Email":"メールアドレス",
+  "Password":"パスワード",
+  "Remember me":"ログイン状態を保存する",
+  "Log in":"ログイン",
+  "Forgot your password?":"パスワードを忘れた方はこちら",
+
+  "Name":"名前",
+  "Confirm Password":"確認用",
+  "Already registered?":"すでに登録されている方はこちら",
+  "Register":"登録",
+
+  "Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.":"パスワードをお忘れになりましたか？問題ありません。メールアドレスをお知らせいただければ、パスワード再設定用のリンクをメールでお送りしますので、新しいパスワードをお選びください。",
+  "Email Password Reset Link":"メールパスワード再設定リンク",
+
+  "Dashboard":"ダッシュボード",
+  "You're logged in!":"ログイン成功",
+
+  "Profile":"プロフィール",
+  "Log Out":"ログアウト",
+
+  "Profile Information":"プロフィール情報",
+  "Update your account's profile information and email address.":"アカウントのプロフィール情報、メールアドレスを更新する。",
+  "Your email address is unverified.":"あなたのメールアドレスは確認されていません。",
+  "Click here to re-send the verification email.":"認証メールを再送信する場合は、こちらをクリックしてください。",
+  "A new verification link has been sent to your email address.":"新しい認証リンクがあなたのメールアドレスに送信されました。",
+  "Save":"保存",
+  "Saved.":"保存完了",
+
+  "Update Password":"パスワードの更新",
+  "Ensure your account is using a long, random password to stay secure.":"アカウントの安全性を保つために、長くてランダムなパスワードを使用していることを確認してください。",
+  "Current Password":"現在のパスワード",
+  "New Password":"新しいパスワード",
+
+  "Delete Account":"アカウントの削除",
+  "Once your account is deleted, all of its resources and data will be permanently deleted. Before deleting your account, please download any data or information that you wish to retain.":"アカウントが削除されると、そのリソースとデータはすべて永久に削除されます。アカウントを削除する前に、保持したいデータまたは情報をダウンロードしてください。",
+  "Are you sure you want to delete your account?":"本当にアカウントを削除しますか？",
+  "Once your account is deleted, all of its resources and data will be permanently deleted. Please enter your password to confirm you would like to permanently delete your account.":"アカウントが削除されると、そのリソースとデータはすべて永久に削除されます。パスワードを入力して、アカウントを削除することを確認してください。",
+  "Cancel":"キャンセル"
+} 
