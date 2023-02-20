@@ -11,7 +11,9 @@ module.exports = {
     theme: {
         extend: {
             fontFamily: {
-                sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                // sans: ['Nunito', ...defaultTheme.fontFamily.sans],
+                // sansのデフォルトフォントをNoto Sans Japaneseに変更
+                sans: ['Noto Sans JP', ...defaultTheme.fontFamily.sans],
             },
         },
     },
