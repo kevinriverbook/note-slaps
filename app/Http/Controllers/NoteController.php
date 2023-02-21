@@ -25,7 +25,8 @@ class NoteController extends Controller
      */
     public function create()
     {
-        //
+        // createビューを返す
+        return view('notes.create');
     }
 
     /**
