@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Http\Requests\StoreNoteRequest;
 use App\Http\Requests\UpdateNoteRequest;
 use App\Models\Note;
+use Illuminate\Support\Facades\Auth;
 
 class NoteController extends Controller
 {
@@ -37,7 +38,18 @@ class NoteController extends Controller
      */
     public function store(StoreNoteRequest $request)
     {
-        //
+        // Noteモデルをインスタンス化
+        $note = new Note;
+
+        // requestで取得した属性をセット
+        $note->note_title = $request->note_title;
+        $note->note_content = $request->note_content;
+        // 現在ログインしているユーザーidをセット
+        $note->user_id = Auth::id();
+
+        $note->save();
+
+        return redirect()->route('notes.index');
     }
 
     /**

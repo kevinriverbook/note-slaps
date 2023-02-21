@@ -9,20 +9,21 @@
                     <h2 class="text-xl font-bold">新規作成</h2>
                   </header>
                   <!-- 新規作成フォーム -->
-                  <form class="space-y-4">
+                  <form method="post" action="{{ route('notes.store')}}" class="space-y-4">
+                    @csrf
                     <!-- メモタイトル -->
                     <div>
-                      <label class="text-gray-700">タイトル</label>
-                      <input class="w-full border border-gray-300 shadow-sm rounded"/>
+                      <label for="note_title" class="text-gray-700">タイトル</label>
+                      <input type="text" name="note_title" id="note_title" class="w-full border border-gray-300 shadow-sm rounded"/>
                     </div>
                     <!-- メモ本文 -->
                     <div>
-                      <label class="text-gray-700">メモ</label>
-                      <textarea class="w-full border border-gray-300 shadow-sm rounded"></textarea>
+                      <label for="note_content" class="text-gray-700">メモ</label>
+                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded"></textarea>
                     </div>
                     <!-- 送信ボタン -->
                     <div>
-                      <button class="p-2 bg-blue-500 text-white font-bold rounded">保存</button>
+                      <button type="submit" class="px-4 py-2 bg-blue-500 text-white font-bold rounded">保存</button>
                     </div>
                   </form>
               </div>

@@ -29,6 +29,6 @@ Route::middleware('auth')->group(function () {
 });
 
 // Noteコントローラのリソースルート
-Route::resource('notes', NoteController::class);
+Route::resource('notes', NoteController::class)->middleware('auth');
 
 require __DIR__.'/auth.php';
