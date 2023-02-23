@@ -75,7 +75,14 @@ class NoteController extends Controller
      */
     public function edit(Note $note)
     {
-        //
+        // 現在ログイン中のユーザーのみアクセスできるようにする
+        if($note->user_id === Auth::id()){
+            // 成功時は編集画面へ
+            return view('notes.edit', compact('note'));
+        } else {
+            // 失敗時はリダイレクトする
+            return redirect()->route('notes.index');
+        }
     }
 
     /**
