@@ -17,8 +17,8 @@ class NoteController extends Controller
     public function index()
     {
         $notes = Note::where('user_id', '=', Auth::id()) // メモのユーザーidと現在ログインしているユーザーのidが一致したメモを取得
-                    ->orderBy('updated_at', 'desc')     // 更新日が新しい順にソート
-                    ->paginate(10);                     // ページネーション
+                    ->orderBy('updated_at', 'desc')      // 更新日が新しい順にソート
+                    ->simplePaginate(10);                // ページネーション
 
         return view('notes.index', compact('notes'));
     }
