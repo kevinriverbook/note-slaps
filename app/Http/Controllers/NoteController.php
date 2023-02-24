@@ -94,7 +94,20 @@ class NoteController extends Controller
      */
     public function update(UpdateNoteRequest $request, Note $note)
     {
-        //
+        // 現在ログイン中のユーザーのみアクセスできるようにする
+        if($note->user_id === Auth::id()){
+            // メモタイトルを更新
+            $note->note_title = $request->note_title;
+            // メモ本文を更新
+            $note->note_content = $request->note_content;
+            // 保存（created_atとupdated_atが更新される）
+            $note->save();
+
+            return redirect()->route('notes.index');
+        } else {
+            // 失敗時はリダイレクトする
+            return redirect()->route('notes.index');
+        }
     }
 
     /**

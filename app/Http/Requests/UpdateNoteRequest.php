@@ -13,7 +13,8 @@ class UpdateNoteRequest extends FormRequest
      */
     public function authorize()
     {
-        return false;
+        // falseをtrueに変更しないと、403エラーが発生する
+        return true;
     }
 
     /**
