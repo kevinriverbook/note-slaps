@@ -64,7 +64,14 @@ class NoteController extends Controller
      */
     public function show(Note $note)
     {
-        //
+        // 現在ログイン中のユーザーのみアクセスできるようにする
+        if($note->user_id === Auth::id()){
+            // 成功時は閲覧画面へ
+            return view('notes.show', compact('note'));
+        } else {
+            // 失敗時はリダイレクトする
+            return redirect()->route('notes.index');
+        }
     }
 
     /**
