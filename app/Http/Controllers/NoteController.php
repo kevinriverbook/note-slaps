@@ -118,6 +118,15 @@ class NoteController extends Controller
      */
     public function destroy(Note $note)
     {
-        //
+        // 現在ログイン中のユーザーのみアクセスできるようにする
+        if($note->user_id === Auth::id()){
+            // メモを削除
+            $note->delete();
+
+            return redirect()->route('notes.index');
+        } else {
+            // 失敗時はリダイレクトする
+            return redirect()->route('notes.index');
+        }
     }
 }
