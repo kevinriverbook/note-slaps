@@ -8,6 +8,19 @@
                     <!-- 見出し -->
                     <h2 class="text-xl font-bold">メモ新規作成</h2>
                   </header>
+                  <!-- エラーメッセージ -->
+                  @if ($errors->any())
+                    <div class="mt-4 mb-4">
+                      <div class="text-red-600">
+                        エラー
+                      </div>
+                      <ul class='text-sm text-red-600 dark:text-red-400 space-y-1'>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                    </div>
+                  @endif
                   <!-- 新規作成フォーム -->
                   <form method="POST" action="{{ route('notes.store')}}" class="space-y-4">
                     @csrf

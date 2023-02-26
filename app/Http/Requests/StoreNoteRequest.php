@@ -25,7 +25,8 @@ class StoreNoteRequest extends FormRequest
     public function rules()
     {
         return [
-            //
+            'note_title' => ['required', 'string', 'max:30'],
+            'note_content' => ['required', 'max:1000']
         ];
     }
 }
