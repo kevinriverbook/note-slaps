@@ -27,12 +27,12 @@
                     <!-- メモタイトル -->
                     <div>
                       <label for="note_title" class="text-gray-700">タイトル</label>
-                      <input type="text" name="note_title" id="note_title" class="w-full border border-gray-300 shadow-sm rounded" />
+                      <input type="text" name="note_title" id="note_title" value="{{ old('note_title') }}" class="w-full border border-gray-300 shadow-sm rounded" />
                     </div>
                     <!-- メモ本文 -->
                     <div>
                       <label for="note_content" class="text-gray-700">メモ</label>
-                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded"></textarea>
+                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded">{{ old('note_content') }}</textarea>
                     </div>
                     <!-- 送信ボタン -->
                     <div>
