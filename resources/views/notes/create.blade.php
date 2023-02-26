@@ -8,18 +8,31 @@
                     <!-- 見出し -->
                     <h2 class="text-xl font-bold">メモ新規作成</h2>
                   </header>
+                  <!-- エラーメッセージ -->
+                  @if ($errors->any())
+                    <div class="mt-4 mb-4">
+                      <div class="text-red-600">
+                        エラー
+                      </div>
+                      <ul class='text-sm text-red-600 dark:text-red-400 space-y-1'>
+                          @foreach ($errors->all() as $error)
+                              <li>{{ $error }}</li>
+                          @endforeach
+                      </ul>
+                    </div>
+                  @endif
                   <!-- 新規作成フォーム -->
                   <form method="POST" action="{{ route('notes.store')}}" class="space-y-4">
                     @csrf
                     <!-- メモタイトル -->
                     <div>
                       <label for="note_title" class="text-gray-700">タイトル</label>
-                      <input type="text" name="note_title" id="note_title" class="w-full border border-gray-300 shadow-sm rounded" />
+                      <input type="text" name="note_title" id="note_title" value="{{ old('note_title') }}" class="w-full border border-gray-300 shadow-sm rounded" />
                     </div>
                     <!-- メモ本文 -->
                     <div>
                       <label for="note_content" class="text-gray-700">メモ</label>
-                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded"></textarea>
+                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded">{{ old('note_content') }}</textarea>
                     </div>
                     <!-- 送信ボタン -->
                     <div>
