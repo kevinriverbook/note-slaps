@@ -11,7 +11,7 @@
                   <!-- エラーメッセージ -->
                   @if ($errors->any())
                     <div class="mt-4 mb-4">
-                      <div class="text-red-600">
+                      <div class="text-red-600 dark:text-red-400">
                         エラー
                       </div>
                       <ul class='text-sm text-red-600 dark:text-red-400 space-y-1'>
