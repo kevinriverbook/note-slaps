@@ -11,7 +11,7 @@
                   <!-- エラーメッセージ -->
                   @if ($errors->any())
                     <div class="mt-4 mb-4">
-                      <div class="text-red-600">
+                      <div class="text-red-600 dark:text-red-400">
                         エラー
                       </div>
                       <ul class='text-sm text-red-600 dark:text-red-400 space-y-1'>
@@ -26,13 +26,13 @@
                     @csrf
                     <!-- メモタイトル -->
                     <div>
-                      <label for="note_title" class="text-gray-700">タイトル</label>
-                      <input type="text" name="note_title" id="note_title" value="{{ old('note_title') }}" class="w-full border border-gray-300 shadow-sm rounded" />
+                      <label for="note_title" class="font-medium text-sm text-gray-700 dark:text-gray-300">タイトル</label>
+                      <input type="text" name="note_title" id="note_title" value="{{ old('note_title') }}" class="mt-1 w-full dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm" />
                     </div>
                     <!-- メモ本文 -->
                     <div>
-                      <label for="note_content" class="text-gray-700">メモ</label>
-                      <textarea name="note_content" id="note_content" class="w-full border border-gray-300 shadow-sm rounded">{{ old('note_content') }}</textarea>
+                      <label for="note_content" class="font-medium text-sm text-gray-700 dark:text-gray-300">メモ</label>
+                      <textarea name="note_content" id="note_content" class="mt-1 w-full dark:bg-gray-900 border border-gray-300 dark:border-gray-700 rounded-md shadow-sm">{{ old('note_content') }}</textarea>
                     </div>
                     <!-- 送信ボタン -->
                     <div>
