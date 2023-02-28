@@ -13,7 +13,7 @@
                     <table class="table-auto w-full text-left whitespace-nowrap">
                       <thead class="text-gray-700">
                         <tr class="flex justify-between">
-                          <th class="text-lg">タイトル</th>
+                          <th class="text-lg dark:text-gray-300">タイトル</th>
                           <th></th>
                         </tr>
                       </thead>
