@@ -12,22 +12,22 @@
                   <div class="mt-4 space-y-3">
                     <!-- メモタイトル -->
                     <div>
-                      <h3 class="text-gray-700 text-lg font-bold">タイトル</h3>
+                      <h3 class="text-gray-700 dark:text-gray-300 font-bold">タイトル</h3>
                       <p class="break-all">{{ $note->note_title }}</p>
                     </div>
                     <!-- メモ本文 -->
                     <div>
-                      <h3 class="text-gray-700 text-lg font-bold">メモ</h3>
+                      <h3 class="text-gray-700 dark:text-gray-300 font-bold">メモ</h3>
                       <p class="break-all">{{ $note->note_content }}</p>
                     </div>
                     <!-- 作成日 -->
                     <div>
-                      <h3 class="text-gray-700 text-lg font-bold">作成日</h3>
+                      <h3 class="text-gray-700 dark:text-gray-300 font-bold">作成日</h3>
                       <p>{{ $note->created_at->format('Y/m/d') }}</p>
                     </div>
                     <!-- 更新日 -->
                     <div>
-                      <h3 class="text-gray-700 text-lg font-bold">更新日</h3>
+                      <h3 class="text-gray-700 dark:text-gray-300 font-bold">更新日</h3>
                       <p>{{ $note->updated_at->format('Y/m/d') }}</p>
                     </div>
                   </div>

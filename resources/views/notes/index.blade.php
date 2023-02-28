@@ -11,9 +11,9 @@
                   <!-- メモ一覧テーブル -->
                   <div class="mt-2 space-y-4 w-full mx-auto overflow-auto">
                     <table class="table-auto w-full text-left whitespace-nowrap">
-                      <thead class="text-gray-700">
+                      <thead class="text-gray-700 dark:text-gray-300">
                         <tr class="flex justify-between">
-                          <th class="text-lg dark:text-gray-300">タイトル</th>
+                          <th>タイトル</th>
                           <th></th>
                         </tr>
                       </thead>
