@@ -15,7 +15,7 @@
         @vite(['resources/css/app.css', 'resources/js/app.js'])
     </head>
     <body class="font-sans antialiased">
-        <header class="shadow">
+        <header class="shadow-md">
             <div class="p-4 container mx-auto flex flex-col flex-wrap items-center md:flex-row">
                 <!-- Logo -->
                 <div class="mb-4 md:mb-0 shrink-0 flex items-center">
@@ -29,10 +29,120 @@
                     <a href="{{ route('login') }}" class="text-gray-700 hover:text-gray-400 font-bold">ログイン</a>
                     <!-- 登録 -->
                     <button class="ml-4 py-1 px-3 text-white bg-indigo-500 hover:bg-indigo-600 font-bold rounded-md">
-                    <a href="{{ route('register') }}">登録</a>
+                        <a href="{{ route('register') }}">登録</a>
                     </button>
                 </nav>
             </div>
         </header>
+        <section>
+            <div class="px-4 py-24 container mx-auto flex flex-col items-center justify-center">
+                <div class="w-full lg:w-2/3 text-center">
+                    <!-- 見出し -->
+                    <h1 class="mb-8 text-3xl sm:text-6xl text-gray-900 font-bold">CRUD機能を搭載した<br>シンプルな<span class="text-transparent bg-clip-text bg-gradient-to-r from-indigo-500 to-purple-500">メモアプリ</span></h1>
+                    <!-- 説明文 -->
+                    <p class="mb-8 text-left text-gray-600">NoteSlapsはポートフォリオ用に制作されたメモアプリです。基本的なCRUD機能を搭載し、メモの登録、表示、編集、削除などを行うことができます。無料でユーザー登録を開始しましょう。また、GitHubでソースコードを確認することができます。</p>
+                    <!-- CTA -->
+                    <button class="py-2 px-6 text-lg text-white font-bold bg-indigo-500 hover:bg-indigo-600 rounded-md">
+                        <a href="{{ route('register') }}">登録して始める</a>
+                    </button>
+                    <button class="ml-4 py-2 px-6 text-lg font-bold text-gray-900 bg-white hover:bg-gray-300 rounded-md shadow">
+                        <a href="https://github.com/kevinriverbook/note-slaps">GitHub</a>
+                    </button>
+                </div>
+            </div>
+        </section>
+        <section>
+            <div class="bg-indigo-50">
+                <div class="py-16 mb-4 md:py-24 container mx-auto flex flex-wrap justify-center md:flex-row space-y-4 md:space-y-0">
+                    <div class="p-4 text-center md:basis-1/3">
+                        <div class="mb-4 inline-flex justify-center items-center h-16 w-16 text-white bg-indigo-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M10.5 1.5H8.25A2.25 2.25 0 006 3.75v16.5a2.25 2.25 0 002.25 2.25h7.5A2.25 2.25 0 0018 20.25V3.75a2.25 2.25 0 00-2.25-2.25H13.5m-3 0V3h3V1.5m-3 0h3m-3 18.75h3" />
+                            </svg>
+                        </div>
+                        <h2 class="mb-3 text-lg font-bold text-gray-900">レスポンシブデザイン</h2>
+                        <p class="text-left text-gray-800 leading-relaxed">NoteSlapsはレスポンシブデザインにより、スマートフォンやタブレット、PCなどの画面サイズが異なるデバイスでも、使いやすいUIを実現しました。</p>
+                    </div>
+                    <div class="p-4 text-center md:basis-1/3">
+                        <div class="mb-4 inline-flex justify-center items-center h-16 w-16 text-white bg-indigo-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
+                            </svg>
+                        </div>
+                        <h2 class="mb-3 text-lg font-bold text-gray-900">認証機能</h2>
+                        <p class="text-left text-gray-800 leading-relaxed">Laravel Breezeを導入し、ログインやユーザー登録などの認証機能を実装しました。</p>
+                    </div>
+                    <div class="p-4 text-center md:basis-1/3">
+                        <div class="mb-4 inline-flex justify-center items-center h-16 w-16 text-white bg-indigo-500 rounded-full">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-8 h-8">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M21.752 15.002A9.718 9.718 0 0118 15.75c-5.385 0-9.75-4.365-9.75-9.75 0-1.33.266-2.597.748-3.752A9.753 9.753 0 003 11.25C3 16.635 7.365 21 12.75 21a9.753 9.753 0 009.002-5.998z" />
+                            </svg>                          
+                        </div>
+                        <h2 class="mb-3 text-lg font-bold text-gray-900">ダークモード対応</h2>
+                        <p class="text-left text-gray-800 leading-relaxed">NoteSlapsはダークモードに対応しています。ダークモードは目の疲労を軽減し、バッテリー寿命を伸ばすなどのメリットがあり、近年のWebデザインのトレンドとなっています。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="overflow-hidden">
+            <div class="container mx-auto px-4 py-16 md:py-24">
+                <div class="mb-4 flex w-full flex-col text-center">
+                    <h1 class="text-3xl font-bold text-gray-900 sm:text-4xl">価格</h1>
+                </div>
+                <div class="flex flex-wrap justify-center">
+                    <div class="w-full p-4 md:w-1/2 xl:w-1/4">
+                        <div class="relative flex h-full flex-col overflow-hidden rounded-2xl bg-indigo-500 p-6 shadow-xl shadow-indigo-500/50">
+                            <h2 class="mb-1 text-center tracking-widest text-white">基本</h2>
+                            <h1 class="mb-4 pb-4 text-center text-5xl leading-none text-white">¥0</h1>
+                            <button class="mt-auto mb-8 flex w-full items-center justify-center rounded-full border-0 bg-white py-2 px-4 font-bold text-gray-900 hover:bg-gray-300">
+                                <a href="{{ route('register') }}">登録して始める</a>
+                            </button>
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="mr-2 inline-flex flex-shrink-0 items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>メモの一覧表示
+                            </p>
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="mr-2 inline-flex flex-shrink-0 items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>メモの新規作成
+                            </p>
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="mr-2 inline-flex flex-shrink-0 items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>メモの閲覧
+                            </p>
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="mr-2 inline-flex flex-shrink-0 items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>メモの編集
+                            </p>
+                            <p class="mb-2 flex items-center text-white">
+                                <span class="mr-2 inline-flex flex-shrink-0 items-center justify-center">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                                        <path stroke-linecap="round" stroke-linejoin="round" d="M9 12.75L11.25 15 15 9.75M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                                    </svg>
+                                </span>メモの削除
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <footer>
+            <div class="bg-gray-200">
+                <div class="container mx-auto flex justify-center py-8 px-5">
+                    <p class="text-center text-gray-500">Copyright © 2023 kevinriverbook</p>
+                </div>
+            </div>
+        </footer>
     </body>
 </html>
