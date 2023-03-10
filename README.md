@@ -36,3 +36,21 @@ https://noteslaps.com/
 - 日本語化対応
 - レスポンシブ対応
 - ダークモード
+## 使用技術
+### バックエンド
+- PHP 8.1
+- Laravel 9.x
+### フロントエンド
+- HTML (Blade)
+- Tailwind CSS 3
+### インフラ
+- ConoHa VPS
+    - Ubuntu 20.04.4 LTS
+    - Apache
+    - MariaDB
+### 開発環境
+- WSL (Ubuntu 22.04.1 LTS)
+- VSCode (Remote-WSL)
+- Laravel Sail (Docker)
+- Git
+    - GitHub
